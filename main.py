@@ -32,3 +32,9 @@ async def login(request: Request, password: str = Form(...)):
     keys = res.json().get("keys", [])
     
     return templates.TemplateResponse("index.html", {"request": request, "logged_in": True, "keys": keys})
+
+if __name__ == "__main__":
+    import uvicorn
+    import os
+    port = int(os.getenv("PORT", 10000))  # Use Render's PORT or fallback
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)

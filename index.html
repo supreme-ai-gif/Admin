@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neuralic AI – Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>🔐 Neuralic AI – Admin Panel</h1>
+
+    <div class="section">
+        <h2>Create API Key</h2>
+        <input id="owner" placeholder="Owner Name">
+        <input id="password" placeholder="Master Password" type="password">
+        <button onclick="createKey()">Create Key</button>
+        <p id="createResult"></p>
+    </div>
+
+    <div class="section">
+        <h2>List Existing Keys</h2>
+        <input id="passwordList" placeholder="Master Password" type="password">
+        <button onclick="listKeys()">Load Keys</button>
+        <pre id="keysOutput"></pre>
+    </div>
+
+    <div class="section">
+        <h2>Revoke API Key</h2>
+        <input id="keyToRevoke" placeholder="API Key">
+        <input id="passwordRevoke" placeholder="Master Password" type="password">
+        <button onclick="revokeKey()">Revoke Key</button>
+        <p id="revokeResult"></p>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
